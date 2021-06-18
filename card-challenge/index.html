@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+ 
+      body{
+        font-family:'Kumbh Sans', sans-serif;
+        color: hsl(0, 11%, 12%);
+        
+      }
+      section{
+        background-image: url(bg-pattern-bottom.svg);
+        background-color:  hsl(185, 75%, 39%);
+        height: 100vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position:relative;
+
+      }
+      .card{
+        background-color:white;
+        border-radius: 7%;
+        width: 350px;
+        overflow: hidden;
+        /*pour des elements de mm taille celui du dessous defini les contours
+         ou définit comment gérer le dépassement du contenu d'un élément dans son bloc*/
+        text-align: center;
+
+      }
+      .card-header{
+        background-image: url(bg-pattern-card.svg);
+        background-size: cover;
+        height: 150px;
+      }
+      .card-body{
+        padding: 0 20px 30px;
+      }
+      .img-holder{
+        border-radius: 50%;
+        height:100px;
+        width:100px;
+        border: solid 5px white;
+        overflow: hidden;
+        margin: -50px auto 30px auto;
+      }
+      /* faire une section a stylise permet de faire un cadre */
+      .img-holder img { 
+        width:100%;
+        height: auto;
+        display:block;
+      }
+      .name-age{
+        font-size: 1rem;
+        margin-bottom:10px;
+      }
+      .age,
+      .city,
+      .meta{
+        font-weight: 400;
+       color: hsl(227, 10%, 46%);
+       opacity: .70;
+        
+      }
+      /*possible de regrouper les classes pour donner les mm caracteristiques avec virgule 
+      et {} a la derniere classe.*/
+
+      .age{
+        font-weight: 400;
+      }
+      .card-footer{
+        border: solid 1px hsl(0, 0%, 93%);
+        display:flex;
+        padding: 0 25px;
+      }
+
+      .card-footer .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        height: 90px;
+      }
+      .card-footer .item .value
+      {
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
+      .card-footer .item .meta
+      {
+        font-size: .80rem;
+        letter-spacing: .03px;
+      }
+      
+  </style>
+</head>
+<body>
+  <div class='back'></div>
+  <section class='main'>
+    <div class='card'>
+      <div class='card-header'>
+      </div>
+        <div class ='card-body'>
+           <div class="img-holder">
+             <img src="image-victor.jpg" alt="img-victor">
+           </div>
+            
+            <h2 class="name-age"> Victor Crest <span class="age">
+             26</span>
+            </h2> 
+            <h3 class="city">London</h3>
+          </div>
+          
+          <div class="card-footer">
+            <div class="item">
+              <h4 class="value">  80K</h4>
+              <h5 class="meta">Followers</h5>
+            </div>
+            <div class="item">
+              <h4 class="value">803K</h4>
+              <h5 class="meta">Likes</h5>
+            </div>
+            <div class="item">
+              <h4 class="value">1.4K</h4>
+              <h5 class="meta">Photos</h5>
+          </div>
+    </div>
+       
+    
+    
+  </section>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Aliette-by</a>.
+  </div>
+</body>
+</html>
